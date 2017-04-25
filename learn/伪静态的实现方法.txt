@@ -1,0 +1,32 @@
+﻿左键单击Phpstudy的托盘图标，选择“配置文件”→“httpd-conf”，记事本会自动打开该文件。接着Ctrl+F打开查找对话框，输入 AllowOverride ，找到后你会发现默认后面是none，将它改成All，应该不只一个，全部修改为ALL。
+
+1.开启mod_rewrite.so,即去掉前面的#号。
+2.修改<directory配置加入AllowOverride All
+3.编写.htaccess文件
+Listen 80
+Listen 8029
+
+
+NameVirtualHost *:80
+<VirtualHost *:80>
+DocumentRoot "D:\WWW\demo"
+ServerName localhost:80
+<Directory "D:\WWW\demo">
+Options FollowSymLinks
+Allow from all
+Order Allow,Deny
+AllowOverride All
+Satisfy all
+</Directory>
+</VirtualHost>
+
+
+
+<ifmodule mod_rewrite.c>
+  RewriteEngine On  
+  RewriteCond %{QUERY_STRING} ^(.*)
+  RewriteRule ^(\w{2,10})$  /index.php?m=$1&%1
+
+</ifmodule>
+
+然后在首页里的导航栏那里写成/user   /reg等。

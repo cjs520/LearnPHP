@@ -1,6 +1,6 @@
 <?php include "header.php"?>
     <div>
-        <form action="" method="get">
+        <form  method="post">
             <h2><?php echo $title;?></h2>
             <label for="">用户名</label>
             <input type="text" name="username" placeholder="请输入用户名">
