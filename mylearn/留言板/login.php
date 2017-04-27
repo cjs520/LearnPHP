@@ -7,7 +7,8 @@
  */
 
 include "mysql_connect.php";
-if($_GET[out]){
+
+if($_GET["out"]){
     setcookie("cookie","out");
     echo "<script language=\"JavaScript\">location.href='login.php';</script>";
     
@@ -49,4 +50,5 @@ if($_COOKIE['cookie']!='ok'){
     <a href="?out=login">退出</a>
     <?
 }
+
 ?>
