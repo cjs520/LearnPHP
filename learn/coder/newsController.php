@@ -14,6 +14,9 @@ class newsController extends phpBoss{
         }else{
             include "ui/newslist.php";
         }
+        $db=new dbutil();
+        $result=$db->queryForArray("SELECT * FROM `news`");
+        var_export($result);
     }
 
 

@@ -3,6 +3,7 @@
 require "config.php";
 require ROOTPATH."phpBoss.php";
 require ROOTPATH."../leader.php";
+require ROOTPATH."../db/dbutil.php";
 $type=$_GET["m"];
 
 
