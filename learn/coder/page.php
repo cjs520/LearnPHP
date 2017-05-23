@@ -8,7 +8,7 @@ class page{
         );
         $link2=array(
             "title"=>"谷歌",
-            "href"=>"https://www.google.com",
+            "href"=>"https://www.google.com.hk",
             "target"=>"_blank"
         );
         $links[]=$link1;
