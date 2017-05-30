@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .class2{
+            background: gray;
+            color:white;
+            padding:5px;
+            margin: 2px;
+        }
+        .class1{
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+   <ol>
+       <li>
+           I like <code>apples</code> and oranges.
+       </li>
+        <li>
+            I like <code></code> apples and oranges.
+        </li>
+       <!--<li>
+           I like <code/> apples and oranges.
+       </li>-->
+       <li>
+           I like apples and  oranges.
+           <hr>
+           Today was warm and sunny.
+       </li>
+       <li>
+           I like apples and  oranges.
+           <hr/>
+           Today was warm and sunny.
+       </li>
+       <li>
+            I like <a href="/apples.html">apples</a> and oranges.
+       </li>
+       <li>
+           I like <a href="/apples.html" class="link" id="firstlink">apples</a> and oranges.
+       </li>
+       <li>
+           Enter your name:<input disabled>
+       </li>
+       <li>
+           Enter your name:<input disabled="">
+           <br>
+           Enter your name:<input disabled="disabled">
+       </li>
+       <li>
+           Enter your name：<input disabled="true" data-creator="adam" data-purpose="collection">
+       </li>
+       <li>
+           &lt; &gt;&amp;&euro;&pound;//HTML实体
+       </li>
+       <li>
+           <form action="">
+               Name:<input type="text" name="name" accesskey="n"/>
+               <p/>
+               Password:<input type="password" name="password" accesskey="p"/>
+               <p/>
+               <input type="submit" value="log In"accesskey="s"/>
+           </form>
+       </li>
+       <li>
+           <a href="http://apress.com" class="class1 class2">Apress Web Sites</a>
+           <p/>
+           <a href="http://w3c.org" class="class2 otherclass">W3C Web Sites</a>
+           <script type="text/javascript">
+               var elems =document.getElementsByClassName("otherclass");
+               for (i=0;i<elems.length;i++){
+                   var x=elems[i];
+                   x.style.border="thin solid black";
+                   x.style.backgroundColor="white";
+                   x.style.color="black";
+               }
+           </script>
+       </li>
+       <li>
+           <p contenteditable="true">It is raining right now</p>//contenteditable设置为true单击文字可编辑
+       </li>
+   </ol>
+</body>
+</html>
