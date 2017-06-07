@@ -23,11 +23,11 @@ class userController extends phpBoss{
 				echo 'fail';
 			}*/
 			$db=new dbutil();
-			$sql="SELECT * FROM `myuser` WHERE user_name='".$_POST["username"]."'";
-			$ret=$db->queryForArray($sql);
+			$sql="select * from myuser where user_name=:username";
+			$ret=$db->queryForParam($sql,$_POST["username"]);
 			if($ret && count($ret)==1){
 				$ret=$ret[0];
-				if($ret["user_pwd"]==$_POST["userpwd"]){
+				if($ret["user_pass"]==$_POST["userpwd"]){
 					echo "ok";
 				}
 				else{
@@ -52,7 +52,18 @@ class userController extends phpBoss{
 		return $this->arr_title;
 	}
 }
+function login(){
+	include "ui/login.php";
+}
+function register(){
+	if($_POST){
+		$username=$_POST["username"];
+		$userpwd=$_POST["userpwd"];
+		if($username==""||$userpwd==""){
+			
+		}
 
+	}
 
 
 

@@ -18,12 +18,13 @@ header("Content-type:text/html;charset=utf-8");
 			return $ret->fetchAll(PDO::FETCH_ASSOC);
 
 		}
-        function queryForParam($sql,$param){
-            $pre_ret=$this->db->prepare($sql);
-            $pre_ret->bindParam(":username",$param );
-            $pre_ret->execute();
-            return $pre_ret->fetch(PDO::FETCH_ASSOC);
-        }
+
+		function queryForParam($sql,$param){
+			$pre_ret=$this->db->prepare($sql);
+			$pre_ret->bindParam(":username",$param);
+			$pre_ret->execute();
+			return $pre_ret->fetchAll(PDO::FETCH_ASSOC);
+		}
 
 
 
