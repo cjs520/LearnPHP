@@ -8,7 +8,7 @@
 $host="localhost";
 $db_user="root";
 $db_pass="root";
-$db_name="test";
+$db_name="myweb";
 $timezone="Asia/Shanghai";
 
 $con=@mysqli_connect($host,$db_user,$db_pass) or die("链接失败");
