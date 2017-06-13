@@ -11,9 +11,9 @@
 			if(!$this->isinner) 
 				echo "&&旗下bb网";
 		?>
-		<a href="news">主站新闻</a> |
-		<a href="bbnews">bb新闻</a> |
-		<a href="user">用户登录</a> |
-		<a href="exit">退出登录</a>
+		<a href="/news">主站新闻</a> |
+		<a href="/bbnews">bb新闻</a> |
+		<a href="/user">用户登录</a> |
+		<a href="/user/reg">用户注册</a> |
+		<a href="/exit">退出登录</a>
 	</div>
-	

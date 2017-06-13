@@ -2,11 +2,11 @@
 		<p>
 			友情链接：
 			<?php
-				$links=new page();
-				$ret=$links->get_friendLinks();
-				foreach ($ret as $value){
-					echo "<a href='".$value['href']."' target='".$value['target']."'>".$value['title']."</a>   ";
-				}
+			$links=new page();
+			$ret=$links->get_friendLinks();
+			foreach ($ret as $value){
+				echo "<a href='".$value['href']."' target='".$value['target']."'>".$value['title']."</a>   ";
+			}
 
 
 
@@ -16,5 +16,5 @@
 		版权所有 © 2017 Mozilla Firefox. 北京谋智火狐信息技术有限公司
 	</div>
 
-</body>
-</html>	
+	</body>
+	</html>	
