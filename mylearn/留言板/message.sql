@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-06-08 22:04:59
+Date: 2017-06-16 23:10:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,17 +20,14 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `message`;
 CREATE TABLE `message` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user` varchar(255) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `content` varchar(255) DEFAULT NULL,
-  `lastdate` datetime DEFAULT NULL,
+  `id` tinyint(1) NOT NULL AUTO_INCREMENT,
+  `user` varchar(25) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `content` tinytext NOT NULL,
+  `lastdate` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of message
 -- ----------------------------
-INSERT INTO `message` VALUES ('1', '1111111111111', '111111111111111111', '111111111111111111111111111', '2017-06-08 22:01:58');
-INSERT INTO `message` VALUES ('2', '222222222222222', '22222222222222', '222222222222222222222222222222222222222222', '2017-06-08 22:03:05');
-INSERT INTO `message` VALUES ('3', '333333333333333333333', '3333333333333333333', '444444444444444444444444444', '2017-06-08 22:03:11');
