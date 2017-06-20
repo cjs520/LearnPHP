@@ -2,8 +2,11 @@
 
 function delcookie(){
     setcookie( "cookie",'',time()-1*3600 );
+    setcookie( "add",'',time()-1*3600 );
 }
-
+function addcookie(){
+    setcookie("add","check",time()+60);
+}
 
 ?>
     <!DOCTYPE html>
@@ -43,7 +46,7 @@ function delcookie(){
                     <div class="col-sm-offset-4 col-sm-4">
                         <button type="submit" name="submit" class="btn btn-default">发布留言</button>
                         <button type="button" name="exit" class="btn btn-default" onclick="return ex()"><?php delcookie();?> 退出</button>
-                        <button type="button" name="show" class="btn btn-default" onclick="return showms()">查看留言</button>
+                        <button type="button" name="show" class="btn btn-default" onclick="return showms()"><?php addcookie();?>查看留言</button>
                     </div>
                 </div>
             </form>
